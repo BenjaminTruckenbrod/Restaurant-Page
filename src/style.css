@@ -1,0 +1,65 @@
+#header-img{
+    display: block;
+    max-width:100px;
+    max-height:95px;
+    width: auto;
+    height: auto;
+    margin-left: 30px;
+    border-radius: 50%;
+}
+
+body, html{
+    background-color: rgb(255, 246, 196);
+    height: 100%;
+}
+
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('./Tomatoes-O8L8.ttf') format('truetype')
+  }
+
+h1{
+    font-family: 'MyFont';
+}
+
+#tag{
+    font-family: 'MyFont';
+    margin: .1rem;
+    margin-left: 20px;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    /* flex: 1; */
+    height: 60px;
+    align-items: center;
+    /* margin-left: 50px; */
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+#body_container{
+    border-style: solid;
+    border-color: black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+
+.testimony_copy{
+    border-style: solid;
+    border-color: rgb(173, 167, 134);
+    max-width: 300px;
+    padding: 10px;
+    margin: 5px;
+}
