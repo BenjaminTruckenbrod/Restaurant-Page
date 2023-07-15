@@ -70,3 +70,10 @@ function addListeners(){
 }
 
 addListeners();
+
+let footer = document.createElement("footer")
+let para = document.createElement("p")
+para.innerHTML = ("created by: benjamintruckenbrod@github.io")
+
+footer.appendChild(para)
+document.body.appendChild(footer)
