@@ -1,8 +1,9 @@
 import _ from 'lodash'
 import './style.css';
 import Icon from './img/hummus-1.jpg'
-
-console.log("Running")
+import { buildMenu } from './menu.js';
+import { buildContact } from './contact.js';
+import { buildIndex } from './home.js';
 
 let header = document.createElement("header")
 document.body.appendChild(header)
@@ -25,33 +26,47 @@ testimony.id = ("tag")
 testimony.innerHTML = "- for hummus nuts"
 hero.appendChild(testimony)
 
+let tabs = document.createElement("div")
+tabs.id="tabs"
+hero.appendChild(tabs)
+
+let tab1 = document.createElement("div")
+tab1.id=("home")
+let tab2 = document.createElement("div")
+tab2.id=("menu")
+let tab3 = document.createElement("div")
+tab3.id=("contact")
+
+let tab1_text = document.createElement("p")
+let tab2_text = document.createElement("p")
+let tab3_text = document.createElement("p")
+
+tab1.appendChild(tab1_text)
+tab2.appendChild(tab2_text)
+tab3.appendChild(tab3_text)
+
+tab1_text.innerHTML=("Home")
+tab2_text.innerHTML=("Menu")
+tab3_text.innerHTML=("Contact")
+
+tabs.appendChild(tab1)
+tabs.appendChild(tab2)
+tabs.appendChild(tab3)
+
 let body_container = document.createElement("div");
 body_container.id = ("body_container");
 document.body.appendChild(body_container);
 
-let testimony_1 = document.createElement("div")
-testimony_1.className = ("testimony_copy");
-let testimony_1_copy = document.createElement("p")
-testimony_1_copy.innerHTML = ("I love the Hummus Hut so much. We go there everday after soccer practice. -Stacy")
-testimony_1.appendChild(testimony_1_copy)
-body_container.appendChild(testimony_1)
+buildIndex();
 
-let testimony_2 = document.createElement("div")
-testimony_2.className = ("testimony_copy");
-let testimony_2_copy = document.createElement("p")
-testimony_2_copy.innerHTML = ("I love the Hummus Hut so much. We go there everday after soccer practice. - Jenny")
-testimony_2.appendChild(testimony_2_copy)
-body_container.appendChild(testimony_2)
+function addListeners(){
+    let home = document.getElementById("home");
+    let menu = document.getElementById("menu");
+    let contact = document.getElementById("contact");
 
-let testimony_3 = document.createElement("div")
-testimony_3.className = ("testimony_copy");
-let testimony_3_copy = document.createElement("p")
-testimony_3_copy.innerHTML = ("I love the Hummus Hut so much. We go there everday after soccer practice. -Greg")
-testimony_3.appendChild(testimony_3_copy)
-body_container.appendChild(testimony_3)
+    home.addEventListener("click", buildIndex);
+    menu.addEventListener("click", buildMenu);
+    contact.addEventListener("click", buildContact);
+}
 
-
-
-
-// /Users/benjamintruckenbrod/repos/Restaurant-Page/src/img/hummus-1.jpg
-
+addListeners();
