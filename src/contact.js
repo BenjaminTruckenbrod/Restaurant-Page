@@ -5,7 +5,7 @@ body.remove();
 
   
 let body_container = document.createElement("div");
-body_container.id = ("body_container");
+body_container.id= ("body_container");
 document.body.appendChild(body_container);
 
 let testimony_1 = document.createElement("div")

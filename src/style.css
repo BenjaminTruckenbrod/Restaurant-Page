@@ -8,10 +8,22 @@
     border-radius: 50%;
 }
 
-body, html{
+/* body, html{
     background-color: rgb(255, 246, 196);
     height: 100%;
-}
+} */
+
+html, body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(255, 246, 196);
+  }
+  html{
+    height: 100%;
+  }
+  body{
+    min-height: 100%;
+  }
 
 
 @font-face {
@@ -32,10 +44,10 @@ h1{
 header{
     display: flex;
     width: 100%;
-    /* flex: 1; */
     height: 60px;
     align-items: center;
-    /* margin-left: 50px; */
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 body{
@@ -54,6 +66,7 @@ body{
     margin-left: 100px;
     margin-right: 100px;
     border-width: 10px;
+    margin-bottom: 100px;
 
 }
 
@@ -68,7 +81,6 @@ body{
 #hero{
     display: flex;
     justify-content: space-between;
-    flex: 1;
     align-items: center;
     height: 50px;
 }
@@ -102,4 +114,5 @@ footer {
     background-color: red;
     color: white;
     text-align: center;
+    margin-top: 50px;
   }
